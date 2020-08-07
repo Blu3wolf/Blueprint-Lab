@@ -17,10 +17,4 @@ data:extend({
         setting_type = "runtime-global",
         default_value = false
     },
-    {
-        type = "bool-setting",
-        name = "blueprint-lab-design-disable-fog",
-        setting_type = "runtime-global",
-        default_value = false
-    },
 })
