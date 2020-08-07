@@ -72,7 +72,8 @@ function ToTheWorld(player_index)
 		player.force = playerData.force
 		playerData.force = nil
 	end
-    player.character.destructible = true
+
+
     player.cheat_mode = false
 	player.force.recipes["electric-energy-interface"].enabled = false
 	player.force.recipes["infinity-chest"].enabled = false
@@ -87,7 +88,9 @@ function ToTheWorld(player_index)
 
     player.teleport({0, 0}, playerData.character.surface)
 	player.set_controller({type = defines.controllers.character, character = playerData.character})
+    
     playerData.character = nil
+    player.character.destructible = true
 
     ReturnBlueprintImport(player, blueprint)
 
