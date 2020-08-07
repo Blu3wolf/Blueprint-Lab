@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.18.314
+Date: 2020-08-01 again
+     - Make so character is invincible on the world while in the lab
+     - revert changes on 0.18.313
+---------------------------------------------------------------------------------------------------
 Version: 0.18.312
 Date: 2020-08-01 again
      - Fix GUI crash after update.
