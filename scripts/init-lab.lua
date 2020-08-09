@@ -8,11 +8,10 @@ function InitLab(force)
         })
         
         surface.always_day = true
-       
+        surface.generate_with_lab_tiles = true
 
         ChunkLab(surface)
-        surface.generate_with_lab_tiles = true
-        --TileLab(surface)
+        TileLab(surface)
         EquipLab(surface, force)
     end
     
@@ -32,19 +31,19 @@ function ChunkLab(surface)
     end
 end
 
--- function TileLab(surface)
---     tiles = {}
---     for i = -LabRadius*32, LabRadius*32 - 1 do
---         for j = -LabRadius*32, LabRadius*32 - 1 do
---             if (i + j) % 2 == 0 then
---                 table.insert(tiles, {name = "lab-dark-1", position = {i, j}})
---             else
---                 table.insert(tiles, {name = "lab-dark-2", position = {i, j}})
---             end
---         end
---     end
---     surface.set_tiles(tiles)
--- end
+function TileLab(surface)
+    tiles = {}
+    for i = -LabRadius*32, LabRadius*32 - 1 do
+        for j = -LabRadius*32, LabRadius*32 - 1 do
+            if (i + j) % 2 == 0 then
+                table.insert(tiles, {name = "lab-dark-1", position = {i, j}})
+            else
+                table.insert(tiles, {name = "lab-dark-2", position = {i, j}})
+            end
+        end
+    end
+    surface.set_tiles(tiles)
+end
 
 function EquipLab(surface, force)
     electricInterface = surface.create_entity {name = "electric-energy-interface", position = {0, 0}, force = force}
