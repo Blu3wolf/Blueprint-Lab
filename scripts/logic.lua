@@ -156,10 +156,10 @@ function ClearLab(player_index)
         return
     end
 
-    --player.print "clearing the lab"
+    player.print "clearing the lab"
 
 
-
+    TileLab(surface)
     for _, entity in pairs(player.surface.find_entities()) do
 		DestroyEntity(entity, player_index)
     end
