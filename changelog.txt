@@ -1,28 +1,37 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.18.315
+Date: 2020-08-09
+    Bugfix:
+    - Fix lab generation
+---------------------------------------------------------------------------------------------------
 Version: 0.18.314
 Date: 2020-08-01 again
-     - Make so character is invincible on the world while in the lab
-     - revert changes on 0.18.313
+    Bugfix:
+    - Make so character is invincible on the world while in the lab
+    - revert changes on 0.18.313
 ---------------------------------------------------------------------------------------------------
 Version: 0.18.312
 Date: 2020-08-01 again
-     - Fix GUI crash after update.
+    Bugix:
+    - Fix GUI crash after update.
 ---------------------------------------------------------------------------------------------------
 Version: 0.18.311
 Date: 2020-08-01
-     - Make production/construction inside the lab not show up on statistics outside.
-     - Add option to lock access behind research.
-     - Add option to unlock all research while in the lab.
+    Changes:
+    - Make production/construction inside the lab not show up on statistics outside.
+    - Add option to lock access behind research.
+    - Add option to unlock all research while in the lab.
 
 ---------------------------------------------------------------------------------------------------
 Version: 0.18.310
 Date: 2020-06-15
-     - possible fix bug report by NiteAngyl to "Gui element with name BPL_Flow already present in the parent element." on gui.lua
+    Bugfix
+    - possible fix bug report by NiteAngyl to "Gui element with name BPL_Flow already present in the parent element." on gui.lua
 
 ---------------------------------------------------------------------------------------------------
 Version: 0.18.31
 Date: 2020-06-15
    Major Features
-     - Update for <0.18.27+
-     - Spanish translations
-     - New thumbnail.
+   - Update for <0.18.27+
+   - Spanish translations
+   - New thumbnail.
