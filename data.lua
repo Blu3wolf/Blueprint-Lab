@@ -48,5 +48,10 @@ data:extend({
 		enabled = false,
 		ingredients = {},
 		result = "express-loader"
+	}, {
+		type = "font",
+		name = "bluprintlab_cross",
+		from = "default-bold",
+		size = 32
 	},
 })

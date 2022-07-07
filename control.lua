@@ -39,16 +39,19 @@ script.on_init(function()
 end)
 
 script.on_configuration_changed(function(event)
-    if event.mod_changes 
-        and event.mod_changes["TheBlueprintLab_bud"] then
-        --and event.mod_changes["TheBlueprintLab_bud"].old_version == "0.0.1" then
+    if event.mod_changes and event.mod_changes["TheBlueprintLab_bud"] then
         ClearVersion001()
         InitAllPlayers()
-    for _, player in pairs(game.players) do
-        InitIsUnlocked(player.index)
-        CreateGui(player.index)
+        for _, player in pairs(game.players) do
+            InitIsUnlocked(player.index)
+            CreateGui(player.index)
+        end
     end
-end
+    if event.mod_changes and event.mod_changes["BlueprintLab_Blu3wolf"] then
+        for _, player in pairs(game.players) do
+            CreateGui(player.index)
+        end
+    end
 end)
 
 script.on_load(function()
