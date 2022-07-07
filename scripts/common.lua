@@ -64,6 +64,7 @@ EmptyBlueprintString = "0eNqrrgUAAXUA+Q=="
 
 function ReviveEntity(entity, player_index)
     if entity.type == "entity-ghost" then
+        local tags = entity.tags
         _, revived, request = entity.revive({true})
         if not revived then return end
 
@@ -73,9 +74,9 @@ function ReviveEntity(entity, player_index)
             end
             request.destroy()
         end
-		
-        script.raise_event(defines.events.script_raised_built, 
-			{player_index = player_index, entity = revived})
+
+        script.raise_event(defines.events.script_raised_revive,
+			{player_index = player_index, entity = revived, tags = tags})
     elseif entity.type == "tile-ghost" then
         entity.revive()
     end
